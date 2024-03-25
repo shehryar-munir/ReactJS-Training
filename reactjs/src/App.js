@@ -3,7 +3,7 @@ import './App.css';
 import ProductCard from "./Components/ProductCard/ProductCard";
 function App() {
 
-   //const products = null
+   // const products = null
     const products = [
         {
             productColor: "Black",
@@ -41,7 +41,7 @@ function App() {
               justifyContent: 'center',
               height: '100vh', // Adjust the height as needed
           }}>
-              {products && products ?  (
+              {products && (products.length > 0) ?  (
                   products.map((prod, index) => {
                       return <ProductCard productColor={prod.productColor} productName={prod.productName} productDescription={prod.productDescription} productPrice={prod.productPrice} productImg={prod.productImg} key={index} />
                   })

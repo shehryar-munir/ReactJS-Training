@@ -1,14 +1,10 @@
-import React from "react";
+import React , {useState} from "react";
 import Rating from '@mui/material/Rating'
 import  Button from '@mui/material/Button'
 import {Typography} from "@mui/material";
 export default function ProductCard({productImg, productName, productDescription, productPrice,productColor}) {
-    const [value, setValue] = React.useState(4);
+    const [value, setValue] = useState(4);
 
-    const handleClick = (event) => {
-        event.preventDefault();
-         // alert all the information
-    }
 
     return(
 
