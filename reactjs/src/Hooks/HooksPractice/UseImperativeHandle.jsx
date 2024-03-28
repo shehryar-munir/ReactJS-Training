@@ -2,6 +2,8 @@ import React, {forwardRef, useImperativeHandle, useRef} from 'react';
 
 // with the help of useImperativeHandle we can expose certain methods to the parent component
 // and the parent component can call those methods
+
+// Parent4
 const UseImperativeHandle = () => {
 
     const childRef = useRef(null);
