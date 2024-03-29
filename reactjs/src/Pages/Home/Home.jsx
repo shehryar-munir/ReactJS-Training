@@ -19,6 +19,9 @@ const Home = ({login}) => {
                     <Link to={'/parent'}>Render Props</Link>
                 </li>
 
+                <li>
+                    <Link to={'/signup'}>Signup</Link>
+                </li>
             </div>
         </div>
     );

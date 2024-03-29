@@ -9,12 +9,14 @@ import UseImperativeHandle from "./Hooks/HooksPractice/UseImperativeHandle";
 import ControlledUnControlledComponents from "./Hooks/HooksPractice/ControlledUnControlledComponents";
 import ClassComponent from "./Hooks/HooksPractice/ClassComponent";
 import {Outlet, Link} from "react-router-dom";
+import HOC from "./Components/HOC/HOC";
+import Component from "./Components/HOC/Component";
 
 
 function App() {
 
     const [login, setLogin] = useState(false);
-
+    const HOCUsage = HOC(Component)
     return (
 
         <div>
@@ -26,6 +28,7 @@ function App() {
                         <h1>Welcome to the App</h1>
                         <Link to={'/home'}>Home</Link>
                         <Outlet />
+                        <HOCUsage name={"Jhon"}/>
                     </div>
                 ) : (
                     <div>

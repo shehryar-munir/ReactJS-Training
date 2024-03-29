@@ -5,6 +5,7 @@ import ProductCardPage from "../Pages/Products/ProductCardPage";
 import UsersPage from "../Pages/Users/UsersPage";
 import Parent from "../Components/Parent/Parent";
 import React from "react";
+import Signup from "../Pages/Signup/Signup";
 
 const router = createBrowserRouter([
     {
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
     },
 
     {
-        path:'/parent',
+        path: '/parent',
         element: <Parent/>,
+    },
+    {
+        path:'/signup',
+        element: <Signup/>
     }
 
 ]);
