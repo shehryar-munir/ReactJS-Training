@@ -9,29 +9,48 @@ import UseImperativeHandle from "./Hooks/HooksPractice/UseImperativeHandle";
 import ControlledUnControlledComponents from "./Hooks/HooksPractice/ControlledUnControlledComponents";
 import ClassComponent from "./Hooks/HooksPractice/ClassComponent";
 import {Outlet, Link} from "react-router-dom";
-import HOC from "./Components/HOC/HOC";
-import Component from "./Components/HOC/Component";
+import HOC from "./Components/HOCComponent/HOC";
+import Component from "./Components/HOCComponent/Component";
 
 
 function App() {
 
     const [login, setLogin] = useState(false);
-    const HOCUsage = HOC(Component)
+
     return (
 
-        <div>
+        <div  style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
 
-            <h1>This is main App Page</h1>
+        }}>
+
             {
                 login ? (
-                    <div>
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+
+                        }}
+                    >
                         <h1>Welcome to the App</h1>
                         <Link to={'/home'}>Home</Link>
-                        <Outlet />
-                        <HOCUsage name={"Jhon"}/>
+                        <Outlet/>
+
                     </div>
                 ) : (
-                    <div>
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        marginTop: "50vh"
+                    }}>
                         <button onClick={() => setLogin(true)}>Login</button>
                         <h1>   You are not loggedin </h1>
                     </div>

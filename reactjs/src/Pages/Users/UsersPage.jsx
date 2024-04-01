@@ -7,36 +7,37 @@ const UsersPage = () => {
 
     const { data: profiles, error: error, isLoaded:loadStatus } = useFetch('https://dummyjson.com/users');
 
-    if (loadStatus === false){
-        return (<div
-            style={{
-                display: 'flex',
-                marginTop: "25%",
-                marginLeft: '50%',
-            }}>
-            <h1>Loading .... </h1>
-        </div>);
-    }
 
     return (
-        <div
-            style={{
-                display: 'flex',
-                marginLeft: '20vh',
+<>
+    {loadStatus ? (<div
+        style={{
+            display: 'flex',
+            marginLeft: '20vh',
         }}>
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-            }}>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+        }}>
 
-                {profiles && (profiles.length > 0) && loadStatus === true ? (
-                    profiles.map((profile, index) => {
-                        return <UserProfile profilePic={profile.image} firstName={profile.firstName} lastName={profile.lastName} contact={profile.email} key={index} />
-                    })
-                ) : null}
-            </div>
+            {profiles && (profiles.length > 0) && loadStatus === true ? (
+                profiles.map((profile, index) => {
+                    return <UserProfile profilePic={profile.image} firstName={profile.firstName}
+                                        lastName={profile.lastName} contact={profile.email} key={index}/>
+                })
+            ) : null}
         </div>
+    </div>) : (<div
+        style={{
+            display: 'flex',
+            marginTop: "25%",
+            marginLeft: '50%',
+        }}>
+        <h1>Loading .... </h1>
+    </div>)}
+
+</>
     );
 }
 

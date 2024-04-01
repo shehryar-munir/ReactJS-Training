@@ -9,12 +9,20 @@ const SignupForm = () => {
 
 
     return(
-        <div>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+        }}>
             <h1>Signup Form</h1>
             <form>
                 <label>First Name</label>
+                &nbsp;
+
                 <input type="text" {...firstName} placeholder="First Name" />
-                <br />
+                &nbsp;
+
                 {firstName.value}
                 {/*<label>Last Name</label>*/}
                 {/*<input type="text" placeholder="Last Name" />*/}

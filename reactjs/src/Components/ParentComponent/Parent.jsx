@@ -1,5 +1,5 @@
 import React from 'react'
-import Child from "../Child/Child";
+import Child from "../ChildComponent/Child";
 
 const componentFromParent = () => {
     return (

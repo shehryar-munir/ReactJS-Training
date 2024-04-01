@@ -27,7 +27,7 @@ const ControlledComponent = () => {
     );
 }
 
-// UnControlled Component is a component that is not controlled by the state of the component i.e React
+// UnControlled Component is a component that is not controlled by the state of the component i.e. React
 // UnControlled Component is controlled by the DOM
 const UnControlledComponent = () => {
     const inputRef = React.createRef();
